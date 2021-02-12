@@ -1,5 +1,6 @@
 import React from "react";
 import Tour from "./Tour";
+import data from "./data";
 
 const Tours = () => {
   return (
@@ -10,7 +11,9 @@ const Tours = () => {
           <div className="underline"></div>
         </div>
         <div>
-          <Tour />
+          {data.map((tour) => {
+            return <Tour {...tour} />;
+          })}
         </div>
       </section>
     </>
